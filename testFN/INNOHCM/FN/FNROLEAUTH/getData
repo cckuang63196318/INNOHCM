@@ -1,0 +1,8 @@
+{
+    "status": "OK",
+    "data": {
+        "ROLES": ["AAA", "BBB"],
+        "FUNCTIONSR": ["FNROLE"],
+        "FUNCTIONSW": ["PA30"]
+    }
+}
