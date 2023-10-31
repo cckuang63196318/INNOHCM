@@ -1,0 +1,68 @@
+{
+    "status": "OK",
+    "data": [
+        {
+            "ROLE": "R1",
+            "DESCRIPTION": "北廠用",
+            "SUBJECTS": [
+                {
+                    "SUBJECT": "S1",
+                    "PARAMETERS": [
+                        { "PARAMETER": "P1", "VALUE": ["V11", "V12"] },
+                        { "PARAMETER": "P2", "VALUE": ["V21", "V22"] }
+                    ]
+                },
+                {
+                    "SUBJECT": "S2",
+                    "PARAMETERS": [
+                        { "PARAMETER": "P3", "VALUE": ["V31", "V32"] },
+                        { "PARAMETER": "P4", "VALUE": ["V41", "V42"] }
+                    ]
+                }
+            ],
+            "FN0000_INFOTYPE": ["異動"]
+        },
+        {
+            "ROLE": "R2",
+            "DESCRIPTION": "南廠用",
+            "SUBJECTS": [
+                {
+                    "SUBJECT": "S3",
+                    "PARAMETERS": [
+                        { "PARAMETER": "P5", "VALUE": ["V11", "V12"] },
+                        { "PARAMETER": "P6", "VALUE": ["V21", "V22"] }
+                    ]
+                },
+                {
+                    "SUBJECT": "S2",
+                    "PARAMETERS": [
+                        { "PARAMETER": "P3", "VALUE": ["V31", "V32"] },
+                        { "PARAMETER": "P4", "VALUE": ["V41", "V42"] },
+                        { "PARAMETER": "P7", "VALUE": ["V41", "V42"] }
+                    ]
+                }
+            ]
+        },
+        {
+            "ROLE": "R3",
+            "DESCRIPTION": "人資管理群",
+            "SUBJECTS": [
+                {
+                    "SUBJECT": "S3",
+                    "PARAMETERS": [
+                        { "PARAMETER": "P5", "VALUE": ["V11", "V12"] },
+                        { "PARAMETER": "P6", "VALUE": ["V21", "V22"] }
+                    ]
+                },
+                {
+                    "SUBJECT": "S2",
+                    "PARAMETERS": [
+                        { "PARAMETER": "P3", "VALUE": ["V31", "V32"] },
+                        { "PARAMETER": "P4", "VALUE": ["V41", "V42"] },
+                        { "PARAMETER": "P7", "VALUE": ["V41", "V42"] }
+                    ]
+                }
+            ]
+        }
+    ]
+}
