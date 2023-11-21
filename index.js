@@ -23,7 +23,7 @@ const rectangles = [
     left: 0,
     top: 0,
     width: 1600,
-    height: 600,
+    height: 1600,
   },
   /*
   {
