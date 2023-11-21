@@ -60,7 +60,7 @@ video.addEventListener(
     console.time();
     //const values = [];
 
-    worker = await Tesseract.createWorker('chi_tra');
+    worker = await Tesseract.createWorker('chi_tra+eng');
     await worker.setParameters({
         tessedit_char_whitelist: '',
     });
