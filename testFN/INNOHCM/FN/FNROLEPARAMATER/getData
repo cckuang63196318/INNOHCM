@@ -1,8 +1,0 @@
-{
-    "status": "OK",
-    "data": {
-        "ROLES": ["AAA", "BBB"],
-        "INFTYR": ["PA0000","PA0002"],
-        "INFTYW": ["PA0000"]
-    }
-}
