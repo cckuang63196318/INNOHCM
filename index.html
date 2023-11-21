@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+    <script src="./tesseract.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="camera" style="margin-top: 20px; border: solid; border-width: 1px; overflow: scroll;">
+        <video id="video">Video stream not available.</video>
+    </div>
+
+    <div style="margin-top: 10px;">
+        <button style="width: 100%;" onclick="cameraClick()">Click</button>
+    </div>
+
+    <div style="display:none;">
+        <canvas id="canvas" > </canvas>
+    </div>
+
+    <!--<div style="display:none;">-->
+    <div style="margin-top: 10px; border: solid; border-width: 1px; overflow: scroll;">
+        <img id="source" />
+    </div>
+
+    <div style="margin-top: 10px;">
+        <textarea id="result" style="width: 100%;" rows="8"></textarea>
+    </div>
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>
