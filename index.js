@@ -127,7 +127,6 @@ function cameraInitial() {
         constraints = { video: { deviceId: { exact: cameraList[currCamera].deviceId } } }
     }
 
-    console.log('deviceId:', cameraList[currCamera].deviceId)
     navigator.mediaDevices
     //.getUserMedia({ video: {facingMode: { exact: "environment" }} })
     .getUserMedia( constraints )
@@ -137,7 +136,7 @@ function cameraInitial() {
     })
     .catch((err) => {
         console.error(`An error occurred: ${err}`);
-        result.innerText = `An error occurred: ${err}\nDevice:(${currCamera})\n${cameraList[currCamera].deviceId}\n${cameraList[currCamera].label}`
+        result.innerText = `An error occurred: ${err}\nDevice:(${currCamera})`
     });
 }
 
