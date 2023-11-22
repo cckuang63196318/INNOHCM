@@ -12,13 +12,18 @@
     <title>Document</title>
 </head>
 <body>
-    v1.01
+    v1.23
     <div class="camera" style="margin-top: 20px; border: solid; border-width: 1px; overflow: scroll;">
         <video id="video">Video stream not available.</video>
     </div>
 
-    <div style="margin-top: 10px;">
-        <button style="width: 100%;" onclick="cameraClick()">Click</button>
+    <div style="display: flex; justify-content: space-around ;margin-top: 10px;">
+        <button style="width: 45%; height: 50px;" onclick="ocrClick()">OCR Parse</button>
+        <button style="width: 45%; height: 50px;" onclick="cameraSwitch()">Camera Switch</button>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 10px;">
+        <input type="file" id="myfile" name="myfile" accept="image/png, image/jpeg">
     </div>
 
     <div style="display:none;">
