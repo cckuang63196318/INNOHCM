@@ -115,15 +115,22 @@ async function ocrClick() {
 function cameraInitial() {
 
     let str = ''
+    let constraints = null
     cameraList.forEach(item => {
         str = str + `${item.label},`
     })
     result.innerText = `Device:(${currCamera})\n${str}`;
 
+    if(currCamera < 0) {
+        constraints = { video: {facingMode: { exact: "environment" }} }
+    } else {
+        constraints = { video: { deviceId: { exact: cameraList[currCamera].deviceId } } }
+    }
+
     console.log('deviceId:', cameraList[currCamera].deviceId)
     navigator.mediaDevices
     //.getUserMedia({ video: {facingMode: { exact: "environment" }} })
-    .getUserMedia( { video: { deviceId: { exact: cameraList[currCamera].deviceId } } })
+    .getUserMedia( constraints )
     .then((stream) => {
         video.srcObject = stream;
         video.play();
@@ -149,20 +156,14 @@ async function cameraDeviceList() {
             cameraList.push({key: idx, label: `Camera${idx+1} (Front)`, deviceId:`${devices[idx].deviceId}`})
         } else {
             cameraList.push({key: idx, label: `Camera${idx+1} (Normal)`, deviceId:`${devices[idx].deviceId}`})
-            if(defaultCamera < 0) {
-                defaultCamera = idx
-                currCamera = idx
-            }
         }
-    }
-
-    if(defaultCamera < 0) {
-        defaultCamera = 0;
-        currCamera = 0;
     }
 }
 
 function cameraSwitch() {
+    if(currCamera < 0) {
+        return
+    }
     currCamera = currCamera + 1
     if(currCamera >= cameraList.length) {
         currCamera = defaultCamera
